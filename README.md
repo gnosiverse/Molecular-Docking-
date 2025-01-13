@@ -23,3 +23,5 @@ command = f"""{vina_executable} --receptor {receptor} \
 # Run the command
 print(f"Docking {ligand_file}...")
 os.system(command)
+# Youtube Video
+  https://youtu.be/LtULkMiaA68?si=7wm_oNRyDc41w2KI
