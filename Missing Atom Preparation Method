@@ -1,1 +1,39 @@
-#refrences https://www.youtube.com/watch?v=45YE5s4KMYE
+Procedure :
+Download Modeller from https://salilab.org/modeller/download_installation.html
+
+Create a file into pc named repair and keep those file are contaning missing residues
+ open pymol then put the file 
+then click S to select all residue here you will be seeing Amino acids previously you will see some 00000000000000000000000
+then there missing between amino acids number such as 131----137 here 5 residue missing in Sumbol it will be seen as AHDRRF-----ASJSFHFS
+NOW   you are confirmed where those residues are missing. Also open the PDB file in the notepad you will those residue missing here indicated in latter 
+
+in the google search by the receptor name RCSB PDB click on it 
+download in the fasta format
+open that file in to the note pad then you will those component are withing that were written 
+
+go to the Salilab.orgv > documentation >Wiki> Search > Missing residue > you will see a code :
+
+from modeller import *
+# Get the sequence of the 1qg8 PDB file, and write to an alignment file
+code = '1qg8'                                                                                   
+e = Environ()
+m = Model(e, file=code)
+aln = Alignment(e)
+aln.append_model(m, align_codes=code)
+aln.write(file=code+'.seq')
+ [Here  '1qg8'    is the sample receptor where residue missing]
+
+Now  create a python file named script1.py in the repair folder paste the code
+based on the pdb file you will have to put the name in the code = 'replaced by 1qg8'   
+
+click in the right three dot option in the folder and uncheck the Hide extensions for know file
+then you will see .txt besides the script1.py cut that and same only script1.py
+
+now find the Modeller application file  > bin > repair. this repair file will be empty you have to paste every file fom  the previous repair file 
+
+search on pc modeller command promt now run as adminstration 
+
+
+
+Refrences:
+1] https://www.youtube.com/watch?v=45YE5s4KMYE
